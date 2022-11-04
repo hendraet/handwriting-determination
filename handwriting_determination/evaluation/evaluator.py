@@ -14,10 +14,10 @@ from chainer.backend import get_array_module
 from chainer.dataset import concat_examples
 from tqdm import tqdm
 
-from config.config import parse_config
-from datasets.prediction_dataset import PredictionDataset
-from utils.backup import restore_backup
-from utils.bbox.bbox import AxisAlignedBBox
+from handwriting_determination.config.config import parse_config
+from handwriting_determination.datasets.prediction_dataset import PredictionDataset
+from handwriting_determination.utils.backup import restore_backup
+from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
 
 
 class Evaluator:

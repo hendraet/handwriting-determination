@@ -77,7 +77,12 @@ def get_definition_filename(obj):
 
 def restore_backup(backup_plan, backup_dir):
     if 'import_string' in backup_plan:
-        exec(backup_plan['import_string'])
+        try:
+            exec(backup_plan['import_string'])
+        except ModuleNotFoundError:
+            tmp = backup_plan['import_string'].split()
+            new_import_string = f"{tmp[0]} handwriting_determination.{tmp[1]} {' '.join(tmp[2:])}"
+            exec(new_import_string)
         klass = eval(backup_plan['class_name'])
         return klass
 

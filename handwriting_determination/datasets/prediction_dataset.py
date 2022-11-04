@@ -1,9 +1,9 @@
 import cv2
 import numpy
 
-from datasets.image_dataset import BaseImageDataset
-from utils.bbox.bbox import AxisAlignedBBox
-from utils.datatypes import Size
+from handwriting_determination.datasets.image_dataset import BaseImageDataset
+from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
+from handwriting_determination.utils.datatypes import Size
 
 
 class PredictionDatasetMixin:

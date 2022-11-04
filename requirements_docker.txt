@@ -13,7 +13,7 @@ networkx
 numpy
 opencv-python
 Pillow
-protobuf
+protobuf==3.19.6
 pyparsing
 python-dateutil
 PyWavelets

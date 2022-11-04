@@ -10,7 +10,7 @@ from pathlib import Path
 import chainer
 from tqdm import tqdm
 
-from analysis.analyzer import is_image, Analyzer
+from handwriting_determination.analysis.analyzer import is_image, Analyzer
 
 
 def init_process(model_path, needs_patches, device):

@@ -9,7 +9,7 @@ import celery
 from PIL import Image
 from celery import Celery
 
-from analysis.analyzer import Analyzer
+from handwriting_determination.analysis.analyzer import Analyzer
 import logging
 logger = logging.getLogger(__file__)
 

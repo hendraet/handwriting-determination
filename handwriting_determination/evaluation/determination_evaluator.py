@@ -6,9 +6,9 @@ import numpy
 from PIL import ImageDraw
 from chainer.backend import get_array_module
 
-from datasets.prediction_dataset import PredictionDataset
-from evaluation.evaluator import Evaluator
-from utils.bbox.bbox import AxisAlignedBBox
+from handwriting_determination.datasets.prediction_dataset import PredictionDataset
+from handwriting_determination.evaluation.evaluator import Evaluator
+from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
 
 
 class DeterminationEvaluator(Evaluator):

@@ -10,10 +10,10 @@ from chainer import Chain
 from chainer.backend import get_array_module
 from chainer.dataset import concat_examples
 
-from datasets.prediction_dataset import PredictionDatasetMixin
-from utils.backup import restore_backup
+from handwriting_determination.datasets.prediction_dataset import PredictionDatasetMixin
+from handwriting_determination.utils.backup import restore_backup
 
-from utils.bbox.bbox import AxisAlignedBBox
+from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
 
 Image.init()
 
@@ -35,8 +35,9 @@ class Analyzer:
 
         with log_file.open() as f:
             self.log_data = json.load(f)[0]
+        image_size = self.log_data['image_size']
 
-        self.prediction_helper = PredictionDatasetMixin(image_size=self.log_data['image_size'], max_size=2000)
+        self.prediction_helper = PredictionDatasetMixin(image_size=image_size, max_size=2000)
         self.initialized = False
         self.network = None
         self.initialize()
@@ -54,7 +55,7 @@ class Analyzer:
             self.network = self.load_network('@numpy')
 
     def load_network(self, device_id) -> Chain:
-        net_class = restore_backup(self.log_data['net'], '.')
+        net_class = restore_backup(self.log_data['net'], '.')  # TODO: Refactor this and also make whole analyzer independent of log file
         net = net_class()
 
         with numpy.load(str(self.model_path)) as f:

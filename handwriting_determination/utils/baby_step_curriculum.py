@@ -7,8 +7,8 @@ from chainer import cuda, Variable
 from chainer.training import extension
 import chainer.training.trigger as trigger_module
 
-from datasets.concatenated_dataset import ConcatenatedDataset
-from datasets.sub_dataset import split_dataset_random, split_dataset
+from handwriting_determination.datasets.concatenated_dataset import ConcatenatedDataset
+from handwriting_determination.datasets.sub_dataset import split_dataset_random, split_dataset
 
 
 class BabyStepCurriculum(extension.Extension):

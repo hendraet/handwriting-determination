@@ -11,8 +11,8 @@ from chainer.datasets.image_dataset import _check_pillow_availability
 from imgaug import augmenters as iaa
 from imgaug import parameters as iap
 
-from utils.datatypes import Size
-from utils.img_utils import prepare_image
+from handwriting_determination.utils.datatypes import Size
+from handwriting_determination.utils.img_utils import prepare_image
 
 
 class BaseImageDataset(DatasetMixin):

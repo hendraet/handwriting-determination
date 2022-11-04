@@ -9,7 +9,7 @@ services:
     build: .
     command: sh -c '/opt/wait-for rabbitmq:5672 -- celery -A tasks worker'
     volumes:
-      - ./training:/app
+      - ./handwriting_determination:/app
       - /home/christian/workspace/WPI/handwriting-determination:/data
     environment:
       - BROKER_ADDRESS=rabbitmq

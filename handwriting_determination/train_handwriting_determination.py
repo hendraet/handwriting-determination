@@ -10,13 +10,13 @@ from chainer.optimizers import Adam
 from chainer.training import StandardUpdater, Trainer, extensions
 from tensorboardX import SummaryWriter
 
-from config.config import parse_config
-from datasets.image_dataset import BaseImageDataset
-from networks.handwriting import HandwritingNet
-from utils.backup import get_import_info
-from utils.logger import Logger
-from utils.tensorboard.tensorboard_evaluator import TensorboardEvaluator
-from utils.tensorboard.tensorboard_gradient_histogram import TensorboardGradientPlotter
+from handwriting_determination.config.config import parse_config
+from handwriting_determination.datasets.image_dataset import BaseImageDataset
+from handwriting_determination.networks.handwriting import HandwritingNet
+from handwriting_determination.utils.backup import get_import_info
+from handwriting_determination.utils.logger import Logger
+from handwriting_determination.utils.tensorboard.tensorboard_evaluator import TensorboardEvaluator
+from handwriting_determination.utils.tensorboard.tensorboard_gradient_histogram import TensorboardGradientPlotter
 
 
 def prepare_log_dir(args):
@@ -28,7 +28,7 @@ def prepare_log_dir(args):
 def main(args):
     args = prepare_log_dir(args)
 
-    # set dtype for training
+    # set dtype for handwriting_determination
     chainer.global_config.dtype = args.dtype
 
     train_dataset = BaseImageDataset(
@@ -148,10 +148,10 @@ if __name__ == "__main__":
         formatter_class=argparse.ArgumentDefaultsHelpFormatter
     )
     parser.add_argument("log_name", help="name of the log dir to create")
-    parser.add_argument("config", help="path to config file to use for training")
+    parser.add_argument("config", help="path to config file to use for handwriting_determination")
     parser.add_argument("--log-dir", default="test", help="name of the subdir where we want to put logs")
     parser.add_argument("--gpu", default="-1", help="gpu or device to use, ints > 0 indicate a GPU, -1 == CPU, everything else is chainerx")
-    parser.add_argument("--resume", help="path to log dir from where to resume training from")
+    parser.add_argument("--resume", help="path to log dir from where to resume handwriting_determination from")
     parser.add_argument("--save-gradient", action='store_true', dest="save_gradient_information", default=False, help="plot gradient information to tensorbard")
 
     args = parser.parse_args()

@@ -83,7 +83,7 @@ class ImageServer(ThreadingMixIn, TCPServer):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Tool that shows current pictures of a training')
+    parser = argparse.ArgumentParser(description='Tool that shows current pictures of a handwriting_determination')
     parser.add_argument('--host', default='0.0.0.0', help='address to listen on')
     parser.add_argument('--port', type=int, default=1337, help='port to listen on')
 

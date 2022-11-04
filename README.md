@@ -42,7 +42,7 @@ In the section `[PATHS]` you have to set the paths to your `train.json` and `val
 You can then use the script `train_handwriting_determination.py` to train a model.
 It could look like this:
 ```shell script
-python train_handwriting_determination.py training config.cfg --gpu 0
+python train_handwriting_determination.py handwriting_determination config.cfg --gpu 0
 ```
 This runs the training, saves the logs in the directory `test/training`, while setting the config to
 `config.cfg` and running the training on GPU `0`.
@@ -60,7 +60,7 @@ You can also inspect the train logs, using tensorboard.
 After you've trained a model, you can evaluate the model using the script `evaluate.py`.
 You can use it like this (assuming that our model was logged to `test/training` and your data is in `/data/val.json`):
 ```shell script
-python evaluate.py test/training HandwritingNet_ /data/val.json -g 0
+python evaluate.py test/handwriting_determination HandwritingNet_ /data/val.json -g 0
 ```
 This evaluates all trained model files that start with `HandwritingNet_` in the directory
 `test/training` using the validation groundtruth in `/data/val.json`.

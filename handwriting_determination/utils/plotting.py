@@ -59,7 +59,7 @@ class LogPlotter(object):
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='tool to create plots of training')
+    parser = argparse.ArgumentParser(description='tool to create plots of handwriting_determination')
     parser.add_argument("log_file", help="path to log file")
     parser.add_argument("-d", "--destination", dest='destination', help='where to save the resulting plot')
     parser.add_argument("-f", "--from", dest='start', default=0, type=int, help="start index from which you want to plot")

@@ -5,14 +5,14 @@ import matplotlib
 
 from tqdm import tqdm
 
-from evaluation.determination_evaluator import DeterminationEvaluator
+from handwriting_determination.evaluation.determination_evaluator import DeterminationEvaluator
 
 matplotlib.use('Agg')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Tool that evaluates handwriting model", formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("log_dir", help='path to log dir of training')
+    parser.add_argument("log_dir", help='path to log dir of handwriting_determination')
     parser.add_argument("snapshot_prefix", help="prefix of snapshots to evaluate")
     parser.add_argument("eval_gt", help="path to evaluation gt")
     parser.add_argument("--log-name", default="log", help="name of the log file")

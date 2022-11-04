@@ -3,7 +3,7 @@ import chainer.links as L
 
 from chainer import Chain
 
-from networks.resnet.resnet import ResNet
+from handwriting_determination.networks.resnet.resnet import ResNet
 
 
 class HandwritingNet(Chain):
