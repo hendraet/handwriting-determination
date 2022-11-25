@@ -1,7 +1,6 @@
 import argparse
 import os
 import re
-
 from collections import namedtuple
 
 from PIL import Image
@@ -66,7 +65,6 @@ def makedelta(fp, sequence):
                     fp.write(s)
 
             else:
-                # FIXME: what should we do in this case?
                 pass
 
         previous = im.copy()

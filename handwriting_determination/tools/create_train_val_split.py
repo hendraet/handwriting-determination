@@ -1,10 +1,7 @@
 import argparse
-
-import json
-
 import copy
+import json
 import os
-
 import random
 
 

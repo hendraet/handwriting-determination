@@ -1,12 +1,12 @@
-import chainer
 import copy
 
+import chainer
+import chainer.training.trigger as trigger_module
 import six
 from chainer import reporter as reporter_module, configuration
 from chainer.dataset import convert, concat_examples
 from chainer.training import extension
 from chainer.training import extensions
-import chainer.training.trigger as trigger_module
 from chainer.training.extensions import Evaluator
 
 from .logger import Logger

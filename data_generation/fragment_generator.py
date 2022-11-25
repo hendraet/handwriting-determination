@@ -1,12 +1,14 @@
 import math
 import random
+from random import choices
 from random import randint
+
 import cv2
 import numpy as np
+
 from generation_profiles import GRAPHICAL_CANVAS_PROFILE, DRAWING_CANVAS_PROFILE, \
     ARTIFACT_CANVAS_PROFILE, FONT_CANVAS_PROFILE, DOCUMENT_CANVAS_PROFILE, WRITING_CANVAS_PROFILE, \
     HANDWRITTEN_DOCUMENT_PROFILE
-from random import choices
 from image_transformations import random_scale, random_rotation, paste_at_random_location, \
     paste_cutout_at_random_location, random_dilation_erosion
 

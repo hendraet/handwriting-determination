@@ -2,10 +2,8 @@ import argparse
 import sys
 
 import matplotlib
-
-from tqdm import tqdm
-
 from handwriting_determination.evaluation.determination_evaluator import DeterminationEvaluator
+from tqdm import tqdm
 
 matplotlib.use('Agg')
 

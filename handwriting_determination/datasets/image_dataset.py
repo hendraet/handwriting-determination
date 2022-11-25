@@ -1,18 +1,16 @@
 import json
 import os
-import six
 
 import chainer
 import numpy
+import six
 from PIL import Image
-
 from chainer.dataset import DatasetMixin
 from chainer.datasets.image_dataset import _check_pillow_availability
-from imgaug import augmenters as iaa
-from imgaug import parameters as iap
-
 from handwriting_determination.utils.datatypes import Size
 from handwriting_determination.utils.img_utils import prepare_image
+from imgaug import augmenters as iaa
+from imgaug import parameters as iap
 
 
 class BaseImageDataset(DatasetMixin):

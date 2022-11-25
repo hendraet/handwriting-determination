@@ -1,12 +1,11 @@
+import copy
 import json
 import statistics
 from collections import deque
 
-import copy
+import chainer.training.trigger as trigger_module
 from chainer import cuda, Variable
 from chainer.training import extension
-import chainer.training.trigger as trigger_module
-
 from handwriting_determination.datasets.concatenated_dataset import ConcatenatedDataset
 from handwriting_determination.datasets.sub_dataset import split_dataset_random, split_dataset
 

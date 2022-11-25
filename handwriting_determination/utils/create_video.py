@@ -1,15 +1,11 @@
 import argparse
 import os
 import re
-
-from collections import namedtuple
-
-import subprocess
-
 import shutil
-import tempfile
-
+import subprocess
 import sys
+import tempfile
+from collections import namedtuple
 
 SUPPORTED_IMAGETYPES = [".png", ".jpg", ".jpeg"]
 VIDEO_TYPES = [".mpeg", ".mp4"]

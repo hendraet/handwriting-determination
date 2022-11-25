@@ -1,16 +1,16 @@
-import argparse
 import msgpack
+import logging
 import os
 import sys
 from io import BytesIO
 from pathlib import Path
 
 import celery
+import msgpack
 from PIL import Image
 from celery import Celery
-
 from handwriting_determination.analysis.analyzer import Analyzer
-import logging
+
 logger = logging.getLogger(__file__)
 
 class AnalysisTask(celery.Task):

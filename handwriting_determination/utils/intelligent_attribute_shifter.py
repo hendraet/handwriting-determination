@@ -1,11 +1,8 @@
-import statistics
 from collections import deque
 
-import math
-
+import chainer.training.trigger as trigger_module
 from chainer import cuda, Variable
 from chainer.training import extension
-import chainer.training.trigger as trigger_module
 
 
 class IntelligentAttributeShifter(extension.Extension):

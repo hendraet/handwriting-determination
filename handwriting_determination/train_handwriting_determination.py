@@ -4,12 +4,9 @@ import os
 
 import chainer
 import chainer.links as L
-
 from chainer.iterators import MultiprocessIterator
 from chainer.optimizers import Adam
 from chainer.training import StandardUpdater, Trainer, extensions
-from tensorboardX import SummaryWriter
-
 from handwriting_determination.config.config import parse_config
 from handwriting_determination.datasets.image_dataset import BaseImageDataset
 from handwriting_determination.networks.handwriting import HandwritingNet
@@ -17,6 +14,7 @@ from handwriting_determination.utils.backup import get_import_info
 from handwriting_determination.utils.logger import Logger
 from handwriting_determination.utils.tensorboard.tensorboard_evaluator import TensorboardEvaluator
 from handwriting_determination.utils.tensorboard.tensorboard_gradient_histogram import TensorboardGradientPlotter
+from tensorboardX import SummaryWriter
 
 
 def prepare_log_dir(args):

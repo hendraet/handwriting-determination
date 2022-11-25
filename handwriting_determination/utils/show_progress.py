@@ -1,14 +1,13 @@
 import argparse
+import base64
 import json
 import queue
 import threading
 import tkinter
+from io import BytesIO
 from socketserver import ThreadingMixIn, StreamRequestHandler, TCPServer
 
-import base64
-import numpy as np
 from PIL import Image, ImageTk
-from io import BytesIO
 
 
 class ProgressWindow:

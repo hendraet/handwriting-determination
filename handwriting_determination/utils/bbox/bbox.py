@@ -1,11 +1,11 @@
+import math
 from collections import namedtuple
+from functools import reduce
 
 import chainer
-import math
 import numpy as np
 from PIL import Image, ImageDraw
 from chainer.functions import spatial_transformer_grid, spatial_transformer_sampler
-from functools import reduce
 from shapely.geometry import Polygon, LineString
 from shapely.ops import cascaded_union
 

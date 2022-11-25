@@ -5,7 +5,6 @@ import chainer.functions as F
 import numpy
 from PIL import ImageDraw
 from chainer.backend import get_array_module
-
 from handwriting_determination.datasets.prediction_dataset import PredictionDataset
 from handwriting_determination.evaluation.evaluator import Evaluator
 from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox

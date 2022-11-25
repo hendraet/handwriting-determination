@@ -1,6 +1,5 @@
 import os
 import sys
-
 from types import ModuleType
 
 from .module_loading import load_module
@@ -20,7 +19,6 @@ def get_import_info(chain):
 
 
 def generate_backup_plan(chain):
-    # TODO: does not work yet, if child has children that need to be backed up...
     # maximum of one level is allowed right now
     plan = {
         "root_object": get_backup_info(get_module(chain), chain),

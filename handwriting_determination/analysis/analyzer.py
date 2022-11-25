@@ -9,10 +9,8 @@ from PIL.Image import Image as ImageClass
 from chainer import Chain
 from chainer.backend import get_array_module
 from chainer.dataset import concat_examples
-
 from handwriting_determination.datasets.prediction_dataset import PredictionDatasetMixin
 from handwriting_determination.utils.backup import restore_backup
-
 from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
 
 Image.init()

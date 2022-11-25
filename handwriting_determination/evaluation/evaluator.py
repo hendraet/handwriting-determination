@@ -1,23 +1,21 @@
 import json
+import os
+import random
+import re
 from collections import defaultdict
 from pprint import pprint
 
 import chainer
 import matplotlib.pyplot as plt
 import numpy
-import os
-import random
-import re
 from PIL import ImageFont, Image
 from chainer import reporter as reporter_module
 from chainer.backend import get_array_module
 from chainer.dataset import concat_examples
-from tqdm import tqdm
-
 from handwriting_determination.config.config import parse_config
-from handwriting_determination.datasets.prediction_dataset import PredictionDataset
 from handwriting_determination.utils.backup import restore_backup
 from handwriting_determination.utils.bbox.bbox import AxisAlignedBBox
+from tqdm import tqdm
 
 
 class Evaluator:

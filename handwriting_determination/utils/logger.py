@@ -1,5 +1,3 @@
-from itertools import zip_longest
-
 import os
 import shutil
 

@@ -1,6 +1,5 @@
-import numpy
-
 import chainer
+import numpy
 from chainer import functions as F
 from chainer.backends import cuda
 

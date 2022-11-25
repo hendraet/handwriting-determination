@@ -1,7 +1,8 @@
-import requests
-from bs4 import BeautifulSoup
 import urllib
+
+import requests
 import tqdm
+from bs4 import BeautifulSoup
 
 BASE_PAGE_URL = 'https://luna.folger.edu/luna/servlet/view/search?q=Call_Number%3DL.c.*&os={}'
 SAVE_PATH = 'downloaded_images'

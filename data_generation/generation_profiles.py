@@ -1,5 +1,6 @@
 import os
-from image_transformations import otsu_threshold, lighter_otsu_threshold, adaptive_gaussian_threshold, \
+
+from image_transformations import otsu_threshold, adaptive_gaussian_threshold, \
     etched_lines
 
 IMAGE_FORMATS = ('.png', '.JPG', 'jpg', '.JPEG', '.jpeg')

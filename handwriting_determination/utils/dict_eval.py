@@ -1,10 +1,9 @@
 import argparse
 import csv
-
-import hunspell
 from collections import Counter
 from itertools import zip_longest
 
+import hunspell
 from tqdm import tqdm
 
 if __name__ == "__main__":

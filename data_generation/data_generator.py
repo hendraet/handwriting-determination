@@ -1,10 +1,9 @@
+import argparse
 import os
+import queue
+import threading
 
 import cv2
-import numpy as np
-import random
-import threading, queue
-import argparse
 from tqdm import tqdm
 
 from fragment_generator import generate_fragment, positive_trait, negative_trait

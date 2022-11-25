@@ -2,9 +2,7 @@ import argparse
 import os
 
 import tqdm
-
 from PIL import Image
-
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()

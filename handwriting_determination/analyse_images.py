@@ -8,9 +8,8 @@ from concurrent.futures.process import ProcessPoolExecutor
 from pathlib import Path
 
 import chainer
-from tqdm import tqdm
-
 from handwriting_determination.analysis.analyzer import is_image, Analyzer
+from tqdm import tqdm
 
 
 def init_process(model_path, needs_patches, device):

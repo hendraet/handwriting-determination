@@ -1,8 +1,5 @@
 import configparser
 
-import chainer
-import numpy
-
 
 def parse_config(file_name, args):
     config = configparser.ConfigParser()
