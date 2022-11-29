@@ -53,7 +53,7 @@ class Analyzer:
             self.network = self.load_network('@numpy')
 
     def load_network(self, device_id) -> Chain:
-        net_class = restore_backup(self.log_data['net'], '.')  # TODO: Refactor this and also make whole analyzer independent of log file
+        net_class = restore_backup(self.log_data['net'], '.')
         net = net_class()
 
         with numpy.load(str(self.model_path)) as f:
